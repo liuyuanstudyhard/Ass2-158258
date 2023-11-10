@@ -1,0 +1,846 @@
+﻿body {
+    background-color: #668B78;
+}
+
+.nav-link {
+    color: #ccc;
+    font-size: 20px;
+}
+
+    .nav-link:hover,
+    .nav-link:focus {
+        color: #668B78;
+    }
+
+.embroidery-culture {
+    color: #C1925B;
+    font-size: 21px;
+   
+}
+
+.separator {
+    color: #ccc;
+    font-size: 23px;
+
+}
+
+.search-form {
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.submit-button {
+    color: #fff;
+    font-size: 19px;
+    background-color: #C1925B;
+    border: 1px solid #C1925B;
+    padding: 5px;
+    cursor: pointer;
+}
+
+    .submit-button:hover,
+    .submit-button:focus {
+        color: #668B78;
+    }
+#biaoti {
+    width: 100%;
+    text-align: center;
+    margin-top: 150px;
+}
+
+    #biaoti p {
+        display: inline-block;
+        background: url("/picture/biaotinew.png") no-repeat;
+        background-size: 100% 100%;
+        color: #fff;
+        font-size: 32px;
+        padding: 10px 50px;
+        font-family: serif;
+        font-style: italic;
+        font-style: oblique;
+        font-weight: bold;
+    }
+
+#biaoti1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 150px;
+}
+
+    #biaoti1 p {
+        display: inline-block;
+        background: url("/picture/biaotinew.png") no-repeat;
+        background-size: 100% 100%;
+        color: #fff;
+        font-size: 32px;
+        padding: 10px 50px;
+        font-family: serif;
+        font-style: italic;
+        font-style: oblique;
+        font-weight: bold;
+    }
+
+main {
+    margin-top: 40px;
+}
+
+
+
+
+#introduction {
+    width: 1400px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+    #introduction img {
+        margin-top: 10px;
+        width: 500px;
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    #introduction p {
+        color: #fff;
+        text-indent: 4rem;
+        font-family: Arial;
+        padding-top: 40px;
+        font-size: 23px;
+    }
+
+#introduction2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 90px;
+}
+
+    #introduction2 p {
+        display: inline-block;
+        background: url("/picture/biaotinew.png") no-repeat;
+        background-size: 100% 100%;
+        color: #fff;
+        font-size: 30px;
+        padding: 10px 50px;
+        font-family: Verdana;
+    }
+
+
+#banner2 {
+    width: 100%;
+    height: 200px;
+    background: url("/picture/biankuang.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    margin-top: 160px;
+    text-align: center;
+    line-height: 200px;
+    color: #214129;
+    font-size: 26px;
+    font-weight: bolder;
+    margin-bottom: 100px;
+    font-family: Trebuchet MS;
+}
+
+.image-grid {
+    margin-top:100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-card {
+    width: 22%;
+    margin: 10px;
+    text-align: center;
+}
+.appreciation_img {
+    transition: transform 0.3s ease;
+}
+
+    .appreciation_img:hover {
+        transform: scale(1.2);
+        z-index: 1;
+    }
+
+.appreciation_img {
+    width: 100%;
+    height: 150px;
+}
+
+.image-info {
+    font-family: Arial;
+    
+    color: #fff;
+    font-family: '';
+    padding-top: 10px;
+    font-size: 18px
+}
+.description {
+   
+    font-family: Arial;
+    color: #fff;
+    font-family: '';
+    padding-top: 10px;
+    font-size: 18px
+}
+
+#morecontent {
+    text-align: center;
+    margin-top: 30px;
+}
+.show-more-button {
+    background-color: #214129;
+    border: none;
+    color: #ccc;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+    .show-more-button:hover {
+        background-color: #C1925B;
+        color: white;
+    }
+
+#history1 {
+    width: 1400px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+
+}
+
+    #history1 video {
+        margin-top: 10px;
+        width: 700px;
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    #history1 p {
+        color: #fff;
+        text-indent: 4rem;
+        font-family: Arial;
+        padding-top: 20px;
+        font-size: 23px
+    }
+
+
+.history-card {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    
+}
+   
+
+.image-info {
+    flex: 1; 
+    margin-left: 10px; 
+}
+
+
+
+.shaixuan {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+    .shaixuan img {
+        width:120px;
+  
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .shaixuan .dropdown {
+        position: absolute;
+        display: none;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1;
+    }
+
+        .shaixuan .dropdown ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            .shaixuan .dropdown ul li {
+                cursor: pointer;
+                padding: 5px;
+            }
+
+    .shaixuan:hover .dropdown {
+        display: block;
+    }
+
+
+
+
+.form-inline {
+    display: flex;
+    align-items: center;
+    
+}
+
+.input-margin {
+    margin-right: 20px;
+}
+
+#filter {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group {
+    margin-right: 20px;
+}
+
+.btn-primary {
+    background-color: #214129;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sortButton {
+    text-align: right;
+    margin-top: 60px;
+}
+
+.sort-link {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.sort-text {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #000;
+    white-space: nowrap;
+    font-family: Arial;
+    color: #214129;
+
+}
+
+.sort-link:hover .sort-text {
+    display: block;
+}
+
+.table {
+    text-align: center;
+    
+    font-family: Arial;
+}
+
+    .table tbody tr {
+        line-height: 4;
+    }
+
+    .table td,
+    .table th {
+        vertical-align: middle;
+        font-size: 20px;
+    }
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family:Arial;
+    font-size:20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+}
+
+    .pagination a {
+        display: inline-block;
+        margin: 0px;
+        padding: 8px;
+        border: 1px solid white;
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+#banner3 {
+    width: 100%;
+    height: 200px;
+    background: url("/picture/Masterwork.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    margin-top: 150px;
+    text-align: center;
+    line-height: 200px;
+    color: #fff;
+    font-size: 26px;
+    font-weight: bolder;
+    margin-bottom: 100px;
+    font-family: Trebuchet MS;
+}
+
+
+#introduction5 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    justify-content: center;
+    font-family:Arial;
+}
+
+    #introduction5 ul {
+        width: 50%;
+        float: left;
+        list-style-type: none;
+    }
+
+        #introduction5 ul li {
+            color: #fff;
+            font-size: 23px
+        }
+
+        #introduction5 ul li p {
+            text-align: left;
+        }
+
+        #introduction5 ul li input[type="text"], #introduction5 ul li input[type="email"] {
+            width: 100%;
+            height: 50px;
+        }
+
+        #introduction5 ul li textarea {
+            width: 100%;
+            height: 150px;
+        }
+
+.count_bg2 {
+    width: 30%;
+    float: right;
+    margin-left: 40px;
+}
+
+#introduction5 button {
+    margin-top: 20px;
+    background-color: #214129;
+    height: 40px;
+    color: #fff;
+    border: 2px solid #214129;
+    font-size:20px;
+}
+
+
+.btn-primaryP {
+    margin-left: 20px;
+    background-color: #214129;
+    color: #FFFFFF;
+    border: 2px solid #214129;
+    font-size: 18px;
+}
+
+    .btn-primaryP:hover {
+        background-color: #214129;
+        color: #FFFFFF;
+        border: 2px solid #214129;
+    }
+
+ #CreatePwanz {
+    margin-top: 120px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.imageCreateP {
+    width: 500px;
+    margin-left: 120px;
+    margin-right: 150px;
+}
+
+#Entire {
+    margin-top: 80px;
+}
+
+.dl-horizontal dt {
+    width: 500px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #214129;
+}
+
+.dl-horizontal dd {
+    width: 500px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+
+
+.btn-primaryCreate {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #214129;
+    color: #FFFFFF;
+    border: 2px solid #214129;
+    font-size: 18px;
+}
+
+    .btn-primaryCreate:hover {
+        background-color: #214129;
+        color: #FFFFFF;
+        border: 2px solid #214129;
+    }
+
+a {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+    a:hover {
+        color: #ccc;
+    }
+
+
+
+.hr {
+    margin-top: 120px;
+    border-width: 1px; /* Increase the border width to make it bolder */
+}
+
+#footer {
+    display: flex;
+    margin-left: 20px;
+    height: 70px;
+}
+
+
+.contact {
+    margin-left:10px;
+    margin-top:10px;
+    display: flex;
+    align-items: center;
+}
+
+.email {
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 20px; /* Add a margin for spacing */
+}
+
+.image {
+    width: 50px;
+    height: 50px;
+}
+
+.categories {
+        text-align: center;
+        margin-top: 120px;
+    }
+
+    .category {
+        width: 50%;
+        display: inline-block;
+        position: relative;
+    }
+
+        .category img {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            max-height: 400px;
+            
+        }
+
+    .category-name {
+        margin-top: 20px;
+        font-size: 23px;
+        margin-bottom: 80px;
+    }
+
+        .category-name a {
+            color: #ffffff;
+        }
+
+    #image-container {
+        margin-top:120px;
+        height: 80px;
+background-image: url(/picture/中式宫廷边框8.png);
+background-repeat: repeat;
+background-size: 15%; 
+}
+
+    .captionss {
+        text-align: left;
+        font-size: 20px;
+        position: absolute;
+        top: 0;
+        left: 128px;
+        width: 61%;
+        height: 75%;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding-top: 10px;
+        
+        opacity: 0;
+        transition: opacity 0.5s;
+        z-index: 1;
+    }
+
+    .category:hover .captionss {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+
+.TableP {
+    margin-top: 100px;
+   
+}
+
+
+
+.color-block {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1300px;
+    height: 200px;
+    background-color: #214129;
+}
+
+.imageP {
+    width: 200px;
+    height: 150px;
+    margin: 0 50px;
+}
+
+.link {
+    color: black;
+    font-size: 20px;
+    padding: 3px;
+}
+
+    .link:hover {
+        color: #ccc;
+    }
+
+#introductionP {
+    font-family: Arial;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+
+.label2 {
+    margin-left: 20px;
+}
+
+.btn-primaryP {
+    margin-left: 20px;
+    background-color: #214129;
+    color: #FFFFFF;
+    border: 2px solid #214129;
+    font-size: 18px;
+}
+
+    .btn-primaryP:hover {
+        background-color: #214129;
+        color: #FFFFFF;
+        border: 2px solid #214129;
+    }
+
+
+select [name="Category"], select[name="SortBy"] {
+    height: 25px;
+}
+
+input[type="submit"] {
+    margin-left: 20px;
+    background-color: #214129;
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+    input[type="submit"]:hover {
+        border-color:#C1925B;
+        background-color: #C1925B;
+    }
+
+
+.SaveProduct {
+   
+    margin-top: 90px;
+    display: flex;
+    text-align: center;
+    margin-left: 120px;
+    position: relative; 
+}
+
+.imageSave1 {
+    position: relative; 
+    padding-top: 120px;
+    height: 400px;
+    width: 40%;
+    margin-right: 100px;
+}
+
+.imageSave2 {
+    width: 40%;
+    height: 600px;
+}
+
+.textOnImage {
+    position: absolute;
+    text-align: left;
+    top: 43%; 
+    left: 20%; 
+    width: 400px;
+    transform: translate(-50%, -50%);
+}
+
+    .textOnImage li {
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
+
+
+#CreatePwanz {
+    margin-top: 120px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.imageCreateP {
+    width: 500px;
+    height:600px;
+    margin-left: 120px;
+    margin-right: 150px;
+}
+
+.form-horizontal {
+    margin-top: 90px;
+    width: 500px;
+}
+
+.form-group {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.btn-primaryCreate {
+    margin-top: 20px;
+    background-color: #214129;
+    color: #FFFFFF;
+    border: 2px solid #214129;
+    font-size: 18px;
+}
+
+    .btn-primaryCreate:hover {
+        background-color: #214129;
+        color: #FFFFFF;
+        border: 2px solid #214129;
+    }
+
+a {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+    a:hover {
+        color: #ccc;
+    }
+
+#Entire {
+    
+    margin-top: 35px;
+}
+
+.dl-horizontal dt {
+    width: 500px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #214129;
+}
+
+.dl-horizontal dd {
+    width: 500px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+
+.SaveProduct1 {
+    
+    margin-top: 120px;
+    display: flex;
+    text-align: center;
+    margin-left: 120px;
+    position: relative;
+}
+
+.imageSave12 {
+    position: relative; 
+    padding-top: 120px;
+    height: 400px;
+    width: 40%;
+    margin-right: 100px;
+}
+
+.imageSave21 {
+    width: 40%;
+    height: 600px;
+}
+
+.textOnImage111 {
+    position: absolute;
+    text-align: left;
+    top: 43%; 
+    left: 20%; 
+    width: 400px;
+    transform: translate(-50%, -50%); 
+}
+
+    .textOnImage111 p {
+        font-size: 20px;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+

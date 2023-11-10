@@ -1,0 +1,120 @@
+﻿@model WebApplicationnew.ViewModel.ProductIndexViewModel
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "Products";
+}
+
+
+<div id="biaoti">
+    <p>Merchandises</p>
+</div>
+
+<div class="TableP">
+
+    <div id="introductionP">
+
+        <p>
+            @(String.IsNullOrWhiteSpace(Model.Search) ? "Showing all" : "You search for " +
+Model.Search + " found")
+            @Model.Products.TotalItemCount merchandises
+
+
+
+            @using (Html.BeginForm("Index", "Products", FormMethod.Get))
+            {
+                <label> Filter by Category: </label>
+
+                @Html.DropDownListFor(vm => vm.Category, Model.CatFilterItems, "All");
+
+                <label class="label2">Sort By:</label>
+                @Html.DropDownListFor(vm => vm.SortBy, new SelectList(Model.Sorts, "Value",
+               "Key"), "Default")
+
+                <input type="submit" value="Filter" />
+                <input type="hidden" name="Search" id="Search1" value="@Model.Search" />
+            }
+
+        </p>
+
+    </div>
+    <table class="table" style=" margin-bottom: 70px;">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Products.First().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Products.First().Description)
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Products.First().Price)
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td style="color: black; font-size: 20px;">
+                 
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "link" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "link" })
+                </td>
+            </tr>
+        }
+    </table>
+    
+    
+
+@Html.PagedListPager(Model.Products, page => Url.Action("Index", new
+{
+category = @Model.Category,
+Search = @Model.Search,
+sortBy = @Model.SortBy,
+page
+}))
+
+
+
+</div>
+
+<div class="color-block">
+    <img src="~/picture/P1.png" alt="Image 1" class="imageP">
+    <img src="~/picture/P2.png" alt="Image 2" class="imageP">
+    <img src="~/picture/P3.png" alt="Image 3" class="imageP">
+    <img src="~/picture/P4.png" alt="Image 4" class="imageP">
+</div>
+
+
+<div id="biaoti1">
+    <p>Storage Mode</p>
+</div>
+
+<div class="SaveProduct">
+    <img src="~/picture/Savekuang.png" alt="Savekuang" class="imageSave1">
+    <img src="~/picture/Save.png" alt="Save" class="imageSave2">
+    <ul class="textOnImage">
+        <li>Storage Location: choose a dry, cool, ventilated location for storage, avoid direct sunlight and humid environment.</li>
+        <li>Avoid Squeezing: when storing embroidery, avoid pressing other heavy objects or items on it to avoid crushing or deformation.</li>
+        <li>Regular Turning: long-term storage of embroidery works, it is best to turn once in a while, to prevent long-term pressure caused by the deformation of embroidery.</li>
+    </ul>
+</div>
+
+
+
+

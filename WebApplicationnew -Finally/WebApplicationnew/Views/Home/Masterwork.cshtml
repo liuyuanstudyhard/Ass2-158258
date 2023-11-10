@@ -1,0 +1,79 @@
+
+@using PagedList.Mvc
+@using PagedList
+
+@model IPagedList<WebApplicationnew.Models.Masterwork>
+
+@{
+    ViewBag.Title = "Masterwork";
+}
+
+
+
+<div id="biaoti">
+    <p>MasterWork</p>
+</div>
+
+<div id="introduction">
+
+    <p>
+        Since ancient times, embroidery is a kind of manual art formed to decorate and enrich the daily life of individuals, and embroidery is also a symbol of power and status and a carrier of good life. Along the tradition to date, embroidery can be described as a variety of flowers, emerge in endlessly. We are fortunate to appreciate the different social customs, aesthetics, cultural thoughts of the ancients from the various dynasties and generations of embroidery, as well as prying into the concrete state of the people's happiness.
+    </p>
+</div>
+
+<div id="banner3">
+    <p>The flourishing of embroidery -- Witness the art culture of ancient and modern women's wisdom</p>
+</div>
+
+<div id="biaoti1">
+    <p>Detailed Information</p>
+</div>
+
+
+<div id="sortButton">
+    <a href="@Url.Action("Masterwork", new { sortOrder = "TimeAsc" })" class="sort-link">
+        <img src="/picture/向上.png" alt="Sort by Time (Asc)" style="height: 40px; width: 40px;">
+        <span class="sort-text">In ascending order of time</span>
+    </a>
+    <a href="@Url.Action("Masterwork", new { sortOrder = "TimeDesc" })" class="sort-link">
+        <img src="/picture/向下.png" alt="Sort by Time (Desc)" style="height: 40px; width: 40px;">
+        <span class="sort-text">In descending chronological order</span>
+    </a>
+</div>
+
+
+<div class="table-container">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var masterwork in Model)
+            {
+                <tr data-attributes="@masterwork.Title|@masterwork.Author|@masterwork.Category|@masterwork.time|@masterwork.DescriptionZ">
+                    <td>@masterwork.Title</td>
+                    <td>@masterwork.Author</td>
+                    <td>@masterwork.Category</td>
+                    <td><img src="@masterwork.ImageUrl" alt="Image" style="height: 100px;"></td>
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+</div>
+
+<div id="pagination" class="pagination">
+    @Html.PagedListPager(Model, page => Url.Action("Masterwork", new { page }))
+</div>
+
+
+
+

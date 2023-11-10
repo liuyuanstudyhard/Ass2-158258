@@ -1,0 +1,53 @@
+﻿@model List<Index>
+@{
+    ViewBag.Title = "Home Page";
+}
+<div id="biaoti">
+    <p>Introduction</p>
+
+</div>
+
+
+<div id="introduction">
+    <img src="~/picture/jianjie.jpg" alt="">
+    <p>Chinese embroidery is a traditional Chinese handicraft with a long history and a long history. It is based on silk thread as the main material, the use of embroidery needles to thread silk through the fabric to make patterns and decorations. The origin of embroidery can be traced back to ancient times, about 3000 years ago in the Shang Dynasty has already had the prototype of embroidery. With the passage of time, Chinese embroidery has gradually developed into a unique and exquisite art form. It enjoys a worldwide reputation and is regarded as one of the treasures of Chinese culture. Embroidery has a rich variety of patterns and techniques. Each region has its own unique style of embroidery, reflecting the local regional characteristics and cultural traditions. Common patterns include flowers and birds, figures, landscapes, animals and so on. The color of embroidery is rich and bright, delicate and fine, and the techniques include flat embroidery, three-dimensional embroidery, tapestry and so on. As an intangible cultural heritage, it has been passed down to the present. Whether in traditional handicrafts or modern craft factories, Chinese embroidery has maintained its unique charm and skills and continues to bring beauty and enjoyment to people.</p>
+</div>
+
+<div id="banner2">
+    <p>Traditional culture lives on and the beauty of embroidery goes on and on.</p>
+</div>
+
+
+
+
+<div id="biaoti1">
+    <p>Four Famous Embroideries</p>
+</div>
+
+@if (Model != null)
+{
+    <div class="image-grid">
+        @foreach (var index in Model)
+        {
+            <div class="image-card">
+                <img src="@index.ImageUrl" alt="Image" class="appreciation_img" onclick="toggleDescription(this)">
+                <div class="image-info">
+                    <p>Name: @index.Title</p>
+                    <p>Author: @index.Author</p>
+                    <p>Category: @index.Category</p>
+                </div>
+                <div class="description" style="display: none;">
+                    <p>Description: @index.Description</p>
+                </div>
+            </div>
+        }
+        <div id="morecontent" style="font-family: Arial;">
+            <a class="show-more-button" href="@Url.Action("Masterwork", "Home")" style="font-weight: bold; font-size: 16px;">Show More</a>
+        </div>
+
+
+    </div>
+}
+
+
+

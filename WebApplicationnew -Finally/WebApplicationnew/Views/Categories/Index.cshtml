@@ -1,0 +1,73 @@
+﻿@model IEnumerable<WebApplicationnew.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+
+<div id="biaoti">
+    <p> Category</p>
+</div>
+
+<div id="introduction">
+    <p>
+        The uses of Chinese embroidery mainly include life and art decoration, such as clothing, shoes, bedding, tablecloth, stage, decoration, art collection and so on. Embroidery is a magical element that can add luster to something that was previously plain and add vividness to an object. In order to promote embroidery culture into life, we provide a platform for sellers and buyers of embroidery.
+    </p>
+</div>
+
+
+<div id="image-container"></div>
+
+
+
+<div class="categories">
+    @{
+        var categoryList = Model.ToList();
+        var rows = (int)Math.Ceiling((double)categoryList.Count / 2);
+    }
+
+    @for (var i = 0; i < rows; i++)
+    {
+        <div class="row">
+            @if (i * 2 < categoryList.Count)
+            {
+                var category1 = categoryList[i * 2];
+                <div class="category">
+                    <div class="image-containerss">
+                        <img src="@category1.ImageUrl" alt="@category1.Name">
+                        <div class="captionss">
+                            <p>@category1.D</p>
+                        </div>
+
+                        <div class="category-name">
+                            @Html.ActionLink(category1.Name, "Index", "Products", new { category = category1.Name }, null)
+                        </div>
+                    </div>
+                    </div>
+                    }
+
+                    @if (i * 2 + 1 < categoryList.Count)
+                    {
+                        var category2 = categoryList[i * 2 + 1];
+                        <div class="category">
+                           <div class="image-containerss">
+                               <img src="@category2.ImageUrl" alt="@category2.Name">
+                               <div class="captionss">
+                                   <p>@category2.D</p>
+                               </div>
+
+                               <div class="category-name">
+                                   @Html.ActionLink(category2.Name, "Index", "Products", new { category = category2.Name }, null)
+                               </div>
+                           </div>
+                        </div>
+                    }
+                </div>
+    }
+</div>
+
+
+

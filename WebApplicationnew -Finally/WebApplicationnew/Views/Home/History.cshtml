@@ -1,0 +1,63 @@
+﻿@model List<WebApplicationnew.Models.History>
+@{
+    ViewBag.Title = "History";
+}
+
+
+<div id="biaoti">
+    <p>History</p>
+</div>
+
+<div id="history1">
+
+    <video src="~/picture/Video.mp4" controls muted autoplay></video>
+    <p>
+        Embroidery, called needle embroidery in ancient times, is a process in which the design pattern is embroidered on the textile with colored thread and the stitch is carried to form a pattern pattern. In ancient times it was called "seam", "stitching". Because embroidery is mostly done by women, it belongs to an important part of "needlework". Embroidery is one of the ancient handicraft skills in China. The Chinese handicraft embroidery has a history of more than 2,000 years. There are dozens of embroidery needling methods: square needle, trocar needle, tie needle, long needle, needle, ping gold, poke sand, etc., rich and colorful, each has its own characteristics. Embroidery can be divided into silk embroidery, feather embroidery and hair embroidery according to the material. The uses of embroidery include: life clothing, singing and dancing or opera clothing, tablecloth, pillowcase, cushion and other daily necessities, and screen, wall hanging and other furnishings.
+    </p>
+
+</div>
+
+<div id="biaoti1">
+    <p>Detailed Information</p>
+</div>
+
+<div class="line" style="margin-top: 100px;">
+    <hr class="my-0" style="background-color: #C1925B;">
+</div>
+
+<div class="shaixuan" style="margin-bottom: 100px;">
+    <div class="dropdown">
+        <ul>
+           
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <li onclick="showHistory(@i)">@Model[i].Period</li>
+            }
+        </ul>
+    </div>
+    <img id="filter-image" src="~/picture/筛选.png" alt="筛选" title="筛选">
+</div>
+
+
+@if (Model != null)
+{
+    <div class="history-grid">
+        @foreach (var history in Model)
+        {
+            <div class="history-card">
+                <div class="history-picture">
+                    <img src="@history.ImageUrl" alt="Image" style="width: 300px; height: 400px; margin-top: 40px">
+                </div>
+                    <div class="image-info" style=" margin-left: 100px;">
+                        <p>Name:   @history.Period</p>
+                        <p>Description:   @history.Peculiarity</p>
+                    </div>
+                </div>
+                }
+            </div>
+}
+
+
+
+
+

@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        @*<meta charset="utf-8" />*@
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <div class="my-element my-container" style="background-color: #668B78">
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark justify-content-center" style="background-color: #214129">
+                <div class="container d-flex justify-content-between">
+                    <ul class="navbar-nav">
+                        <li class="nav-item d-inline">
+                            <a href="#" class="nav-link embroidery-culture">Embroidery Culture</a>
+                        </li>
+                        <li class="nav-item d-inline">
+                            <a href="#" class="nav-link separator"> | </a>
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("History", "History", "Home", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Masterwork", "Masterwork", "Home", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Category", "Index", "Categories", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Merchandises", "Index", "Products", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Contact us", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                    </ul>
+
+
+
+                    @using (Html.BeginForm("Index", "Products", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
+                    {
+                        <div class="form-group search-form">
+                            @Html.TextBox("Search", null, new
+                       {
+                           @class = "form-control",
+                           @placeholder = "Search Merchandises"
+                       })
+                        </div>
+                        <button type="submit" class="btn btn-default submit-button">Submit</button>
+                    }
+
+                </div>
+
+
+            </nav>
+
+
+            <div class="line">
+                <hr class="my-0" style="background-color: #ccc;">
+            </div>
+
+            <div class="picture">
+                <img src="~/picture/Embroidery.jpg" alt="Embroidery" class="img-fluid">
+            </div>
+
+            <div class="container body-content">
+                @RenderBody()
+                <hr class="hr">
+                <footer>
+                    <div id="TwoContact">
+                        <div class="contact">
+                            <img class="image" src="~/picture/yejiao.png" alt="">
+                            <div class="email">
+                                @Html.ActionLink("Email: 1293871845@qq.com", "Contact", "Home")
+                            </div>
+                        </div>
+
+
+
+                        <div class="contact">
+                            <img class="image" src="~/picture/下.png" alt="">
+                            <div class="email">
+                                <a href="#" onclick="validateHTML()">Validate HTML5</a>
+                                <a href="#" onclick="validateCSS()">Validate CSS3</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </footer>
+            </div>
+        </div>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
+
